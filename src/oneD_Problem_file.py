@@ -1,16 +1,19 @@
+from uniform_search import uniform_search_method
 
 
 def target_function(self, x_):
     """целевая функция"""
-    return x_**2
+    return 10 * pow((x_ - 1)**2, 1/3)/(x_ ** 2 + 9)
 
 
-class One_D_Problem:
+class OneDProblem:
     def __init__(self):
-        left_border = 0  # интервал
-        right_border = 1
+        self.left_border = 0.1  # интервал
+        self.right_border = 1.5
 
     target_function = target_function
+    uniform_search_method = uniform_search_method
+
     """
     Здесь добавляем методы решения данной задачи
     Методы возвращают два числа: 1) ответ 2) количество обращений к вычислению функции
@@ -22,6 +25,3 @@ class One_D_Problem:
     Для каждого метода надо написать метод красивой печати
     """
 
-
-p1 = One_D_Problem()
-print(p1.target_function(9))
