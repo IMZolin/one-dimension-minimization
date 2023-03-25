@@ -1,4 +1,6 @@
+from uniform_search import uniform_search_method
 from Trial_Point_Method_file import trial_point_method
+
 
 
 def target_function(self, x_):
@@ -16,8 +18,10 @@ class One_D_Problem:
         self.right_border = 1.5
         self.target_function = lambda a: target_function(self, a)
 
-    # target_function = target_function
+
+    uniform_search_method = uniform_search_method
     trial_point_method = trial_point_method
+
 
     """
     Здесь добавляем методы решения данной задачи
@@ -35,5 +39,3 @@ p1 = One_D_Problem()
 print(p1.trial_point_method(0.01))
 p1.target_function = lambda x_: fun(p1, x_)
 print(p1.target_function(8))
-
-
