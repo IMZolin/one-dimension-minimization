@@ -1,6 +1,6 @@
 from uniform_search import uniform_search_method
 from Trial_Point_Method_file import trial_point_method
-
+from golden_egg import golden_search
 
 def target_function(self, x_):
     """целевая функция"""
@@ -20,7 +20,7 @@ class One_D_Problem:
 
     uniform_search_method = uniform_search_method
     trial_point_method = trial_point_method
-
+    golden_search = golden_search
 
     """
     Здесь добавляем методы решения данной задачи
