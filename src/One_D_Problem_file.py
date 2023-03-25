@@ -2,7 +2,6 @@ from uniform_search import uniform_search_method
 from Trial_Point_Method_file import trial_point_method
 
 
-
 def target_function(self, x_):
     """целевая функция"""
     return 10 * (((x_ - 1) ** 2) ** (1 / 3)) / (x_ ** 2 + 9)
@@ -33,9 +32,3 @@ class One_D_Problem:
     """
     Для каждого метода надо написать метод красивой печати
     """
-
-
-p1 = One_D_Problem()
-print(p1.trial_point_method(0.01))
-p1.target_function = lambda x_: fun(p1, x_)
-print(p1.target_function(8))
