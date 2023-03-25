@@ -4,7 +4,7 @@ from math import sqrt
 gold = (3-sqrt(5))/2
 
 
-def golden_search(self,eps):
+def golden_search(eps, self):
     count = 0
     x1 = self.left_border + gold*(self.right_border - self.left_border)
     x2 = self.right_border - gold*(self.right_border - self.left_border)

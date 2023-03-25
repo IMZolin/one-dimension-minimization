@@ -3,7 +3,7 @@
 def recursion_function(self, left, right, accuracy, iterations_tpm):
 
     if right - left < accuracy:
-        return iterations_tpm, (right + left) / 2
+        return (right + left) / 2, iterations_tpm
 
     x_1 = (right - left)/4 + left
     x_2 = (right - left)/4 * 2 + left
@@ -25,7 +25,7 @@ def recursion_function(self, left, right, accuracy, iterations_tpm):
             return recursion_function(self, x_2, right, accuracy, iterations_tpm)
 
 
-def trial_point_method(self, accuracy):
+def trial_point_method(accuracy, self):
     return recursion_function(self, self.left_border, self.right_border, accuracy, 0)
 
 
