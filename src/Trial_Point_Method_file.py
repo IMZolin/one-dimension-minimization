@@ -25,7 +25,7 @@ def recursion_function(self, left, right, accuracy, iterations_tpm):
             return recursion_function(self, x_2, right, accuracy, iterations_tpm)
 
 
-def trial_point_method(accuracy, self):
+def trial_point_method(self, accuracy):
     return recursion_function(self, self.left_border, self.right_border, accuracy, 0)
 
 

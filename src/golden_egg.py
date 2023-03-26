@@ -4,7 +4,11 @@ from math import sqrt
 gold = (3-sqrt(5))/2
 
 
-def golden_search(eps, self):
+def golden_search(self, accuracy):
+    eps = accuracy
+    remember_left_board = self.left_border
+    remember_right_board = self.right_border
+
     count = 0
     x1 = self.left_border + gold*(self.right_border - self.left_border)
     x2 = self.right_border - gold*(self.right_border - self.left_border)
@@ -28,6 +32,9 @@ def golden_search(eps, self):
             count += 1
             fx2 = self.target_function(x2)
     res_dot = (self.left_border + self.right_border) / 2
+
+    self.left_border = remember_left_board
+    self.right_border = remember_right_board
     return res_dot, count
 
 

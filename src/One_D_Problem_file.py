@@ -2,6 +2,7 @@ from uniform_search import uniform_search_method
 from Trial_Point_Method_file import trial_point_method
 from golden_egg import golden_search
 
+
 def target_function(self, x_):
     """целевая функция"""
     return 10 * (((x_ - 1) ** 2) ** (1 / 3)) / (x_ ** 2 + 9)
