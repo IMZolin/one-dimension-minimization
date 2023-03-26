@@ -54,9 +54,10 @@ def graphics():
     golden_theory = []
 
     for accuracy in accuracy_array:
-        tpm_method_theory_min.append(2 * math.log2(4 / (10 ** accuracy)))  # типа округлили до целого
-        tpm_method_theory_max.append(3 * math.log2(4 / (10 ** accuracy)))
-        # us_method_theory.append(5 / math.log2(5 / 2) * (math.log2(4) - math.log2(10 ** accuracy)))
+        # tpm_method_theory_min.append(2 * (math.log2(4 / (10 ** accuracy)) // 1) + 1)  # типа округлили до целого
+        # tpm_method_theory_max.append(3 * (math.log2(4 / (10 ** accuracy)) // 1) + 1)
+        tpm_method_theory_min.append(2 + math.log2(4 / (10 ** accuracy)) // 1)  # типа округлили до целого
+        tpm_method_theory_max.append(3 + 2 * (math.log2(4 / (10 ** accuracy)) // 1))
         us_method_theory.append(((math.log(10 ** accuracy / 4, 2 / 6)) // 1 + 1) * 5)
         golden_theory.append(math.log((10 ** accuracy) / 4, 1 - gold) // 1 + 1 + 2)
 
