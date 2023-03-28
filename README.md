@@ -7,6 +7,10 @@
 
 
 ### Description
+    f(x) = (10 sqrt(3)(x-1)^2)/(x^2 + 9)
+     1. Найти minf(x) на заданном отрезке с точностью [0.1, 0.01, 0.001] с помощью трех методов: метода равномерного поиска, метода пробных точек  и метода золотого сечения 
+     2. Сравнить методы. В качестве критерия использовать число обращений к вычислению функции
+     3. Сравнить методы с теоретическими оценками
 
 ### Get started
 ```bash
@@ -18,20 +22,25 @@ pip install -r requirements.txt
 ### Project structure
 ```bash
 ├───graphics            # images:graphics+scheme of simplex
-├───out                 # result of compiling .tex file
-│   ├───...             # some additional files for .tex
-│   └───lab1_opt_methods.pdf # report .pdf
 ├───report
-│   ├───lab1_opt_methods.tex # report .tex
+│   └───lab3_opt_methods.pdf 
 ├───src                 # code
-│   ├───adapter.py      # task reader
-│   ├───corner_dots.py  # corner dots 
-│   ├───data.xlsx       # task conditions
-│   ├───dual.py         # parse to dual task
-│   ├───executable.py   # main(executable) file
-│   ├───preprocessing.py # additional functional(make canon form)
+│   ├───golden_egg.py      # Golden Ratio Method
+│   ├───main.py  # corner dots 
+│   ├───One_D_Problem_file.py # one dimension minimization problem class
+│   ├───result_analisys.py  # get results
+│   ├───test_uniform.py # test code for running uniform search method
 │   ├───result_analisys.py # get results
-│   └───simplex.py      # simplex method
+│   ├───Trial_Point_Method_file.py # Trial Point Method
+└───────uniform_search.py # Uniform Search Method
 ```
 
 ### Results
+1. Golden Ratio Method
+<img src="images/2-gold.png" alt="golden ratio method">
+2. Trial Point Method
+<img src="images/2-tpm.png" alt="trial point method">
+3. Uniform Search Method
+<img src="images/2-us.png" alt="uniform search method">
+4. Comparison of methods
+<img src="images/2-compare.png" alt="comparison of methods">
