@@ -1,16 +1,18 @@
 ## Solving one-dimensional minimization problems
-* [Description](#description)
-* [Get started](#get-started)
-* [Project structure](#project-structure)
-* [Scheme of Simplex method](#scheme-of-simplex-method)
-* [Results](#results)
+- [Solving one-dimensional minimization problems](#solving-one-dimensional-minimization-problems)
+  - [Description](#description)
+  - [Get started](#get-started)
+  - [Project structure](#project-structure)
+  - [Results](#results)
 
 
 ### Description
-    f(x) = (10 sqrt(3)(x-1)^2)/(x^2 + 9)
-     1. Найти minf(x) на заданном отрезке с точностью [0.1, 0.01, 0.001] с помощью трех методов: метода равномерного поиска, метода пробных точек  и метода золотого сечения 
-     2. Сравнить методы. В качестве критерия использовать число обращений к вычислению функции
-     3. Сравнить методы с теоретическими оценками
+
+$f(x)=4x_1+x_2+4\sqrt{1+3x_1^2+x_2^2}$.
+
+1. Find min f(x) on a given segment with an accuracy of [0.1, 0.01, 0.001] using three methods: the uniform search method, the trial point method and the golden section method
+2. Compare methods. As a criterion, use the number of calls to the calculation of the function
+3. Compare methods with theoretical estimates
 
 ### Get started
 ```bash
